@@ -57,7 +57,7 @@ int main()
 	srand((unsigned)time(&t));
 
 	//冒泡排序
-	printf("==============================冒泡排序==============================");
+	printf("Bubble Sort:");
 	for (int i = 0; i < 10; i++)
 	{
 		stu[i].name = 65 + i;
@@ -67,9 +67,9 @@ int main()
 	for (int i = 0; i < 10; i++) {
 		printf("%c,%d\t", stu[i].name, stu[i].score);
 	}
-	printf("\n进行冒泡排序，结果为：\n");
+	printf("\n结果为：\n");
 	BubbleSort();
-	printf("\n\n==============================选择排序==============================");
+	printf("\n\nSelection Sort:");
 	for (int i = 0; i < 10; i++)
 	{
 		stu[i].name = 65 + i;
@@ -79,7 +79,8 @@ int main()
 	for (int i = 0; i < 10; i++) {
 		printf("%c,%d\t", stu[i].name, stu[i].score);
 	}
-	printf("\n进行选择排序，结果为：\n");
+	printf("\n结果为：\n");
 	SelectionSort();
 	putchar('\n');
+  printf("姓名:廖青松,学号:2021212375");
 }

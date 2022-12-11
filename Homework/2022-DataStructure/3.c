@@ -16,7 +16,6 @@ void Push(STACK* stack, NodeType data)//入栈
     if (stack->top <= N)
         memcpy(&stack->data[stack->top], &data, sizeof(NodeType));
     stack->top = stack->top + 1;
-    printf("\nPush:%c\n", data);
 }
 
 NodeType Pop(STACK* stack)//出栈
@@ -147,7 +146,7 @@ int main()
     char cun;
     STACK stack;
     stack.top = 0;
-    printf("Please imput an arithmetic:\n");
+    printf("请输入你的算术四则混合运算表达式:\n");
     fgets(word, N, stdin);
     int m = 0;//记录入栈次数
     int m1 = 0;//记录（后入栈次数
@@ -224,7 +223,7 @@ int main()
     }
     result('\0', res);
     putchar('\n');
-    printf("Reverse order expression is:");
+    printf("最后得到的分解表达式为:");
     for (p = 0; res[p] != '\0'; p++)//打印存入数组中的内容
     {
         printf("%c ", res[p]);
@@ -256,5 +255,6 @@ int main()
         }
     }
     w1 = Pop1(&stack1);
-    printf("The result is:%d\n", w1);
+    printf("最后的结果是:%d\n", w1);
+    printf("姓名:廖青松,学号:2021212375");
 }

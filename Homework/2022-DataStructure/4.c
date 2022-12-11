@@ -69,7 +69,7 @@ int main(void)
         }
         clock = finishTime;
     } while (have - 2 == 0 || front != NULL);
-    printf("模拟总时间：%d\n业务员等待时间：%d\n客户平均等待时间：%f\n", clock, spareTime, (double)waitTime / count);
-    printf("客户人数：%d\n总等待时间：%d\n", count, waitTime);
+    printf("模拟总时间：%ds\n------------\n业务员总空闲时间：%ds\n客户平均等待时间：%.2fs\n", clock, spareTime, (double)waitTime / count);
+    printf("客户总人数：%d人\n客户总等待时间：%ds\n", count, waitTime);
     return 0;
 }

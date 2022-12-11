@@ -1,4 +1,3 @@
-#define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -9,7 +8,7 @@ typedef struct
 	char rec;//记录
 }SeqList[8];
 
-//顺序查找+'
+//顺序查找
 
 int SeqSearch(SeqList R, int n, KeyType k)
 {
@@ -56,18 +55,18 @@ int main()
 		R[i].rec = i + 65;
 	}
 	//打印顺序表存储的记录
-	printf("顺序表中存储的记录为：\n");
+	printf("表中的数据为：\n");
 	for (int i = 0; i < 8; i++)
-		printf("%d\t%c,%d\n", i + 1, R[i].rec, R[i].key);
+		printf("%d------%c,%d\n", i + 1, R[i].rec, R[i].key);
 	//使用顺序查找，查找关键字为4的记录
-	printf("=======================================================\n");
+	printf("---------------------------\n");
 	printf("使用顺序查找，查找关键字为4的记录\n");
 	int pos_1;
 	pos_1 = SeqSearch(R, 8, 4);
 	printf("\n关键字为4的记录位置为：%d，该条记录为：%c，%d\n", pos_1 + 1, R[pos_1].rec, R[pos_1].key);
 
 	//使用二分查找，查找关键字为7的记录
-	printf("=======================================================\n");
+	printf("---------------------------\n");
 	printf("使用二分查找，查找关键字为7的记录\n\n");
 	int pos_2;
 	pos_2 = BinSearch(R, 8, 7);
